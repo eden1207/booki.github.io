@@ -1,0 +1,937 @@
+@media all and (max-width: 767px) {
+
+
+	/* ---- Propriétés Générales ---- */
+
+
+	@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+	html{
+		font-family: 'Raleway', sans-serif;
+	}
+
+	body{
+		width: auto;
+		margin: auto;
+	}
+
+	h1 {
+		font-size: 22px;
+		font-weight: bold;
+        max-width: 300px;
+	}
+
+	h2 {
+		font-size: 14px;
+		font-weight: bold;
+	}
+
+    h3{
+		font-size: 16px;
+		font-weight: bold;
+		height: 8px;
+	}
+
+	h4{
+		font-size: 14px;
+		font-weight: normal;
+		height: 8px;
+	}
+
+	ul {
+		list-style-type: none;
+		font-size: 16px;
+        padding-left: 0%;
+	}
+
+	p {
+		font-size: 16px;
+		height: 8px;
+        max-width: 300px;
+	}
+
+
+	i[title*="symbole"] {
+		color: #0065fc;
+	}
+
+	i[title*="localisation"] {
+		color: black;
+	}
+
+    .gras{
+		font-weight: bold;
+	}
+
+	/* Couleur et format des symboles en étoile */
+
+    i[title*="blue star"] {
+		color: #0065fc;
+        font-size: 10px;
+	}
+
+	i[title*="grey star"] {
+		color: #f2f2f2;
+        font-size: 10px;
+	}
+
+	i[title*="black star"] {
+		color: black;
+        font-size: 21px;
+	}
+
+    .centrer_booki{
+        display: flex;
+        padding-left: 20%; /* On place une petite marge intérieure pour bien centrer le logo */
+    }
+
+
+
+	/* ---- Mise en forme du header contenant le logo Booki ainsi que les balises hébergements/activités ---- */
+
+
+	/* Organisation des blocks logo et balises hébergements/activités */
+
+	.entete {
+		display: flex;
+        flex-direction: column;
+		justify-content: center; /* On place le logo et la liste hébergements/activités verticalement */
+		width: 100%;
+		height: 150px; /* Fixe la hauteur du conteneur du logo et de la liste */
+		align-items: center; /* On centre le logo et la liste sur l'axe vertical */
+	}
+
+	/* Organisation des deux balises hébergements/activités */
+
+	.menu {
+		display: flex;
+		width: 100%; /* Largeur de la box contenant la liste */
+		justify-content: space-around; /* Le logo et hébergements/activités garde une position centrée selon la variation de largeur de page */
+		/*padding-right: 10%;*/
+	}
+
+
+	.sousmenu{
+		display: flex;
+		justify-content: center; /* Centrage sur l'axe vertical */
+		width: 100%; /* On fixe largeur et hauteur de la box, important pour définir la barre bleue d'animation */
+		height: 50px;
+		align-items: center; /* Centrage sur l'axe horizontal */
+        border-bottom: 3px #f2f2f2 solid;
+	}
+
+	.navigateur{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+
+	li{
+		width: 100%;
+	}
+
+	a[title*="lien_hebergements_activités"]     
+	
+	/* Liens par défaut (non survolés) */
+		{
+		color: black;
+		text-decoration: none;
+		width: 100%;
+	}
+
+	a[title*="lien_hebergements_activités"]:hover
+
+	/* Apparence au survol des liens */
+		{
+		color: #0065fc;
+		border-bottom: 3px #0065fc solid;
+		text-decoration: none;
+		width: 100%;
+	}
+
+    	/* ---- Mise en forme du deuxième gros block de la page ---- */
+
+
+	/* Balise contenant les titres */
+
+
+	.titre {
+		margin-left: 24px;
+		/*min-width: 500px;*/
+	}
+
+	/* Balise de recherche */
+
+	.recherche {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		margin-left: 24px;
+		margin-top: 20px;
+		margin-bottom: 24px;
+		border: 1px solid #f2f2f2;
+        width: 85%;
+        max-width: 380px;
+        min-width: 240px;
+		height: 45px;
+		border-radius: 10px;
+		overflow: hidden;
+	}
+
+	.bouton i{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #f2f2f2;
+		height: 45px;
+		width: 45px;
+	}
+
+	.bouton input[title*="texte recherche"] {
+		color: black;
+		height: 45px;
+		width: 95%;
+		border: none;
+		font-size: 20px;
+		font-weight: bold;
+		padding-left: 5%;
+	}
+
+	.bouton input[title*= "bouton recherche"]{
+		display: none; 
+	}
+
+    i[title*="loupe"] {
+		color: white;
+        background-color: #0065fc;
+        border-radius: 10px;
+	}
+
+
+	/* Organisation des balises contenues dans le filtre */
+
+
+	/* Bloque et sous bloque contenant chaques balises */
+
+
+	.liste_principale {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-left: 24px;
+        width: 85%;
+		min-width: 240px;
+        max-width: 400px;
+	}
+
+	.liste_secondaire{
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 20px; /* Gap horizontal entre les filtres */
+		row-gap: 15px; /* Gap vertical entre les filtres */
+	}
+
+	
+
+	/* Block contenant la balise 1 */
+
+	.filtre1 {
+		display: flex; 
+		align-items: center; /* Centre le logo avec le texte sur l'horizontal */
+		gap: 10px; /* Gap entre le logo et le texte*/
+		border: 2px solid #f2f2f2; /* Couleur des bords */
+		border-radius: 100px; /* Rend les bords circulaires */
+		height: 40px; /* Hauteur de la box */
+		width: 155px; /* Largeur de la box */
+	}
+
+	.filtre1 i {
+		display: flex;
+		align-items: center; /* Aligne le symbole sur l'axe horizontal */
+		justify-content: center; /* Aligne le symbole sur l'axe vertical */
+		min-width: 45px; /* Oblige la boîte contenant le logo à déborder en largeur sur la boîte mère */
+		min-height: 45px; /* Oblige la boîte contenant le logo à déborder en hauteur sur la boîte mère */
+		border-radius: 50%; /* Rend la box du logo circulaire */
+		background-color: #deebff; /* Couleur de fond du disque */
+		overflow: hidden; /* Fait en sorte que les bords du logo cachent le cadre de la boîte mère */
+	}
+
+	.filtre1:hover {
+		color: #0065fc;
+		height: 40px;
+		width: 155px;
+	}
+
+	
+
+	/* Block contenant la balise 2 */
+
+	.filtre2 {
+		display: flex;
+		align-items: center; /* Centre le logo avec le texte sur l'horizontal */
+		gap: 10px; /* Gap entre le logo et le texte*/
+		border: 2px solid #f2f2f2; /* Couleur des bords */
+		border-radius: 100px; /* Rend les bords circulaires */
+		height: 40px; /* Hauteur de la box */
+		width: 115px; /* Largeur de la box */
+	}
+
+	.filtre2 i {
+		display: flex;
+		align-items: center; /* Aligne le symbole sur l'axe horizontal */
+		justify-content: center; /* Aligne le symbole sur l'axe vertical */
+		min-width: 45px; /* Oblige la boîte contenant le logo à déborder en largeur sur la boîte mère */
+		min-height: 45px; /* Oblige la boîte contenant le logo à déborder en hauteur sur la boîte mère */
+		border-radius: 50%; /* Rend la box du logo circulaire */
+		background-color: #deebff; /* Couleur de fond du disque */
+		overflow: hidden; /* Fait en sorte que les bords du logo débordent sur le cadre du filtre */
+	}
+
+	.filtre2:hover {
+		color: #0065fc;
+		height: 40px;
+		width: 115px;
+	}
+
+	/* Block contenant la balise 3 */
+
+
+	.filtre3 {
+		display: flex;
+		align-items: center;
+		gap: 10px; /* Gap entre le logo et le texte*/
+		border: 2px solid #f2f2f2; /* Couleur des bords */
+		border-radius: 100px; /* Rend les bords circulaires */
+		/* On définit la taille de la box pour le filtre */
+		height: 40px;
+		width: 175px;
+	}
+	
+	.filtre3 i {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 45px;
+		min-height: 45px;
+		border-radius: 50%; /* Rend la box du logo circulaire */
+		background-color: #deebff; /* Couleur de fond du disque */	
+		overflow: hidden; /* Fait en sorte que les bords du logo débordent sur le cadre du filtre */
+	}
+	
+	.filtre3:hover {
+		color: #0065fc;
+		height: 40px;
+		width: 175px;
+	}
+
+
+
+	/* Block contenant la balise 4 */
+
+	.filtre4 {
+		display: flex;
+		align-items: center;
+		gap: 10px; /* Gap entre le logo et le texte*/
+		border: 2px solid #f2f2f2; /* Couleur des bords */	
+		border-radius: 100px; /* Rend les bords circulaires */
+	
+		/* On définit la taille de la box pour le filtre */
+		height: 40px;
+		width: 225px;
+	}
+	
+	.filtre4 i {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 45px;
+		min-height: 45px;
+		border-radius: 50%; /* Rend la box du logo circulaire */
+		background-color: #deebff; /* Couleur de fond du disque */
+		overflow: hidden; /* Fait en sorte que les bords du logo débordent sur le cadre du filtre */
+	}
+	
+	.filtre4:hover {
+		color: #0065fc;
+		height: 40px;
+		width: 225px;
+	}
+
+
+
+	/* Block contenant la balise d'information */
+
+	.info {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		column-gap: 10px;
+		margin-left: 24px;
+		margin-top: 20px;
+		margin-bottom: 50px;
+	}
+
+	.membre i {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 2px solid #f2f2f2;
+		border-radius: 50%;
+		height: 30px;
+		width: 30px;
+	}
+
+	/* ---- Mise en forme du troisième gros block de la page ---- */
+
+
+	/* Bloque Hébergements/Populaires */
+
+	.hebergement_populaire{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 35px;
+	}
+
+
+	/* Bloque Populaires */
+
+	     /* Organisation du titre/cadres */
+
+	.populaires{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		height: 530px;
+		width: 100%; /* On adapte la largeur du cadre à la variation de taille de la page */
+		background-color: #f2f2f2;
+        padding-bottom: 20px;
+		margin-bottom: 30px;
+	}
+
+	    /* Organisation du texte dans chaque cadre */
+
+	.populaires_article{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		/*width: 210px;*/
+		height: 120px;
+		margin-left: 20px; /* Créé un gap fixe entre le texte et la photo */
+		margin-right: 5px;
+	}
+
+	.populaires_article_texte{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 60px;
+	}
+
+	    /* Organisation d'un cadre = bloque photo/texte */
+
+	.populaires_bloque{
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	/* Apparence au survol du bloque */
+
+	a[title*="lien_populaires"]     
+	
+	/* Liens par défaut (non survolés) */
+		{
+		color: black;
+		text-decoration: none;
+		/*max-width: 260px;*/
+		width: 85%; /* On adapte la largeur du cadre à la variation de taille de la page */
+		height: 130px;
+		border-radius: 20px;
+		background-color: white;
+		border: 4px solid white;
+		overflow: hidden;
+		box-shadow: 1px 1px 10px gray; /* Ajout d'une ombre sur les cadres */
+	}
+
+	a[title*="lien_populaires"]:hover
+
+	/* Apparence au survol des liens */
+		{
+		color: #0065fc;
+		text-decoration: none;
+		border: 4px #0065fc solid;
+		/*max-width: 260px;*/
+		width: 85%; /* On adapte la largeur du cadre à la variation de taille de la page */
+		height: 130px;
+		border-radius: 20px;
+		background-color: white;
+		overflow: hidden;
+	}
+
+	    /* Gestion de l'image dans le cadre */
+
+	.card_image_populaire{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+		width: 100%;
+        max-width: 130px;
+		height: 200px;
+		object-fit: cover; /* redimension de l'image dans le cadre */
+	}
+
+	    /* Gestion du titre/étoile dans l'en-tête */
+
+	.populaires_membre{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 90%; /* On adapte à la largeur de la page web */
+	}
+
+
+	/* Bloque Hébergements */
+
+	    /* Gestion du bloque "Titre", des 2 bloques "photos" et du bloque "afficher plus" */
+
+	#Hebergements{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		height: 1450px;
+		width: 90%; /* On adapte à la largeur de la page web */
+		/*min-width: 360px;*/
+		/*margin-left: 10%;*/
+		/*margin-right: 10%;*/
+	}
+
+	    /* Gestion des 2 bloques "photos" */
+
+	.Hebergements_bloque{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		height: 630px;
+	}
+
+	    /* Gestion de la card = photo + texte */
+
+	.card{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		background-color: white;
+	}
+
+	
+		/* Apparence au survol du bloque */
+
+		a[title*="lien_hebergements_card"]     
+	
+		/* Liens par défaut (non survolés) */
+			{
+			color: black;
+			text-decoration: none;
+			/*min-width: 180px;*/
+			width: 90%; /* On adapte la largeur du cadre à la variation de taille de la page */
+			/*max-width: 470px;*/
+			height: 190px;
+			border-radius: 20px;
+			background-color: white;
+			border: 4px solid white;
+			overflow: hidden; /* Enlève ce qui dépasse du texte */
+			box-shadow: 1px 1px 10px gray; /* Ajout d'une ombre sur les cadres */
+		}
+	
+		a[title*="lien_hebergements_card"]:hover
+	
+		/* Apparence au survol des liens */
+			{
+			color: #0065fc;
+			text-decoration: none;
+			border: 4px #0065fc solid;
+			/*min-width: 180px;*/
+			/*max-width: 470px;*/
+			width: 90%; /* On adapte la largeur du cadre à la variation de taille de la page */
+			height: 190px;
+			border-radius: 20px;
+			background-color: white;
+			overflow: hidden; /* Enlève ce qui dépasse du texte */
+		}
+
+
+	    /* Gestion du texte dans la card */
+
+	.card_article{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		/*min-width: 200px;*/
+		width: 100%;
+		height: 70px;
+		padding-left: 20px;
+	}
+
+	    /* Alignement des étoiles dans la card */
+
+	.etoiles{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	    /* Gestion de la taille de la photo dans la cadre */
+
+	.card_image{
+		/*width: 500px;*/
+        width: 100%;
+        /*max-width: 400px;*/
+        min-width: 400px;
+		height: 300px;
+		object-fit: cover; /* On remplit le cadre défini après */
+	}
+
+	    /* On créé un cadre pour imposer la dimension et le centrage de la photo */
+
+	.cadre_image{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 110px;
+		width: 100%;
+		overflow: hidden;
+	}
+
+    		/* ---- Mise en forme du quatrième gros block de la page ---- */
+
+	/* Le bloque global */
+
+	#Activites{
+		display: flex;
+		flex-direction: column;
+		width: 90%;
+		/*min-width: 500px;*/
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-bottom: 40px;
+		height: 1300px;
+	}
+
+	/* Le bloque regroupant toutes les cards */
+
+	.ensemble_card_activite{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		height: 1230px;
+	}
+
+	/* La subdivision en colonne de cards */
+
+	.bloque_vertical_card_activite_grand{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		/*max-width: 470px;*/
+		height: 180px;
+	}
+
+	.bloque_vertical_card_activite_petit{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		/*max-width: 470px;*/
+		height: 390px;
+	}
+
+	/* Gestion du texte dans la card */
+
+	.activite_card_article{
+		display: flex;
+		justify-content: flex-start;
+		padding-left: 10px;
+		width: 100%;
+	}
+		
+	/* Gestion de la taille de la photo dans le cadre des cards 1 et 4 */
+		
+	.card_grande_image{
+		width: 100%;
+		height: 200px;
+		object-fit: cover; /* On remplit le cadre défini après */
+	}
+		
+	/* On créé un cadre pour imposer la dimension et le centrage de la photo */
+		
+	.grand_cadre_image{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 130px;
+		width: 100%;
+		overflow: hidden;
+	}
+	
+
+		/* Apparence au survol du bloque */
+
+		a[title*="lien_activite_card1_et_4"]     
+	
+		/* Liens par défaut (non survolés) */
+			{
+			color: black;
+			text-decoration: none;
+			/*min-width: 180px;*/
+			width: 100%; /* On adapte la largeur du cadre à la variation de taille de la page */
+			height: 180px;
+			border-radius: 20px;
+			overflow: hidden; /* Enlève ce qui dépasse du texte */
+			box-shadow: 1px 1px 10px gray; /* Ajout d'une ombre sur les cadres */
+		}
+	
+		a[title*="lien_activite_card1_et_4"]:hover
+	
+		/* Apparence au survol des liens */
+			{
+			color: #0065fc;
+			text-decoration: none;
+			border: 4px #0065fc solid;
+			/*min-width: 180px;*/
+			width: 100%; /* On adapte la largeur du cadre à la variation de taille de la page */
+			height: 180px;
+			border-radius: 20px;
+			overflow: hidden; /* Enlève ce qui dépasse du texte */
+		}
+
+	/* Gestion de la taille de la photo dans le cadre de la card 2 */
+		
+	.card_petite_image1{
+		width: 100%;
+		height: 200px;
+		object-fit: cover; /* On remplit le cadre défini après */
+	}
+		
+	/* On créé un cadre pour imposer la dimension et le centrage de la photo */
+		
+	.petit_cadre_image1{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 130px;
+		width: 100%;
+		overflow: hidden;
+	}
+
+
+		/* Apparence au survol du bloque */
+
+		a[title*="lien_activite_card2"]     
+	
+		/* Liens par défaut (non survolés) */
+			{
+			color: black;
+			text-decoration: none;
+			/*min-width: 180px;*/
+			width: 100%; /* On adapte la largeur du cadre à la variation de taille de la page */
+			height: 180px;
+			border-radius: 20px;
+			overflow: hidden; /* Enlève ce qui dépasse du texte */
+			box-shadow: 1px 1px 10px gray; /* Ajout d'une ombre sur les cadres */
+		}
+	
+		a[title*="lien_activite_card2"]:hover
+	
+		/* Apparence au survol des liens */
+			{
+			color: #0065fc;
+			text-decoration: none;
+			border: 4px #0065fc solid;
+			/*min-width: 180px;*/
+			width: 100%; /* On adapte la largeur du cadre à la variation de taille de la page */
+			height: 180px;
+			border-radius: 20px;
+			overflow: hidden; /* Enlève ce qui dépasse du texte */
+		}
+
+	/* Gestion de la taille de la photo dans le cadre de la card 3 */
+		
+	.card_petite_image2{
+		width: 100%;
+		height: 200px;
+		object-fit: cover; /* On remplit le cadre défini après */
+	}
+		
+	/* On créé un cadre pour imposer la dimension et le centrage de la photo */
+		
+	.petit_cadre_image2{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 130px;
+		width: 100%;
+		overflow: hidden;
+	}
+
+
+		/* Apparence au survol du bloque */
+
+		a[title*="lien_activite_card3"]     
+	
+		/* Liens par défaut (non survolés) */
+			{
+			color: black;
+			text-decoration: none;
+			/*min-width: 180px;*/
+			width: 100%; /* On adapte la largeur du cadre à la variation de taille de la page */
+			height: 180px;
+			border-radius: 20px;
+			overflow: hidden; /* Enlève ce qui dépasse du texte */
+			box-shadow: 1px 1px 10px gray; /* Ajout d'une ombre sur les cadres */
+		}
+	
+		a[title*="lien_activite_card3"]:hover
+	
+		/* Apparence au survol des liens */
+			{
+			color: #0065fc;
+			text-decoration: none;
+			border: 4px #0065fc solid;
+			/*min-width: 180px;*/
+			width: 100%; /* On adapte la largeur du cadre à la variation de taille de la page */
+			height: 180px;
+			border-radius: 20px;
+			overflow: hidden; /* Enlève ce qui dépasse du texte */
+		}
+
+	/* Gestion de la taille de la photo dans le cadre de la card 5 */
+		
+	.card_petite_image3{
+		width: 100%;
+		height: 200px;
+		object-fit: cover; /* On remplit le cadre défini après */
+	}
+		
+	/* On créé un cadre pour imposer la dimension et le centrage de la photo */
+		
+	.petit_cadre_image3{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 130px;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	
+		/* Apparence au survol du bloque */
+
+		a[title*="lien_activite_card5"]     
+	
+		/* Liens par défaut (non survolés) */
+			{
+			color: black;
+			text-decoration: none;
+			/*min-width: 180px;*/
+			width: 100%; /* On adapte la largeur du cadre à la variation de taille de la page */
+			height: 180px;
+			border-radius: 20px;
+			overflow: hidden; /* Enlève ce qui dépasse du texte */
+			box-shadow: 1px 1px 10px gray; /* Ajout d'une ombre sur les cadres */
+		}
+	
+		a[title*="lien_activite_card5"]:hover
+	
+		/* Apparence au survol des liens */
+			{
+			color: #0065fc;
+			text-decoration: none;
+			border: 4px #0065fc solid;
+			/*min-width: 180px;*/
+			width: 100%; /* On adapte la largeur du cadre à la variation de taille de la page */
+			height: 180px;
+			border-radius: 20px;
+			overflow: hidden; /* Enlève ce qui dépasse du texte */
+		}
+
+	/* Gestion de la taille de la photo dans le cadre de la card 6 */
+		
+	.card_petite_image4{
+		width: 100%;
+		height: 200px;
+		object-fit: cover; /* On remplit le cadre défini après */
+	}
+		
+	/* On créé un cadre pour imposer la dimension et le centrage de la photo */
+		
+	.petit_cadre_image4{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 130px;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	
+		/* Apparence au survol du bloque */
+
+		a[title*="lien_activite_card6"]     
+	
+		/* Liens par défaut (non survolés) */
+			{
+			color: black;
+			text-decoration: none;
+			/*min-width: 180px;*/
+			width: 100%; /* On adapte la largeur du cadre à la variation de taille de la page */
+			height: 180px;
+			border-radius: 20px;
+			overflow: hidden; /* Enlève ce qui dépasse du texte */
+			box-shadow: 1px 1px 10px gray; /* Ajout d'une ombre sur les cadres */
+		}
+	
+		a[title*="lien_activite_card6"]:hover
+	
+		/* Apparence au survol des liens */
+			{
+			color: #0065fc;
+			text-decoration: none;
+			border: 4px #0065fc solid;
+			/*min-width: 180px;*/
+			width: 100%; /* On adapte la largeur du cadre à la variation de taille de la page */
+			height: 180px;
+			border-radius: 20px;
+			overflow: hidden; /* Enlève ce qui dépasse du texte */
+		}
+
+	/* ---- Mise en forme du cinquième gros block de la page ---- */
+
+	.pied_de_page{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		background-color: #f2f2f2;
+		width: 100%;
+		/*min-width: 500px;*/
+		height: 540px;
+		padding-top: 30px;
+	}
+
+	.pied_de_page_colonne{
+		display: flex;
+		flex-direction: column;
+		width: 90%;
+		height: 180px;
+		padding-left: 10%;
+	}
+
+}
